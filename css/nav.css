@@ -1,0 +1,168 @@
+nav {
+  width: 100%;
+  grid-area: nav;
+  display: block;
+  background: var(--pure-white);
+  position: relative;
+}
+
+nav .content {
+  max-width: 1110px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto !important;
+  position: relative;
+}
+
+nav .content .navbar {
+  display: flex;
+  align-items: center;
+  gap: 37px;
+}
+
+nav .content .navbar a {
+  color: var(--pure-black);
+}
+
+nav .content .navbar a:hover {
+  color: var(--light-grey);
+}
+
+nav .content .inviteBtn {
+  background: var(--pure-black);
+  color: var(--pure-white);
+  padding: 12px 24px;
+}
+
+nav .content .inviteBtn:hover {
+  background: var(--light-grey);
+  color: var(--pure-black);
+}
+
+nav #mobile-menu {
+  position: fixed;
+  left: -200%;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 10;
+  background-color: var(--pure-white);
+  padding: 32px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 300ms;
+}
+
+nav #mobile-menu .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  position: relative;
+}
+
+nav #mobile-menu .content .menus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+nav #mobile-menu .content .menus a {
+  color: var(--pure-black);
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+nav #mobile-menu .content .menus a:hover {
+  color: var(--light-grey);
+}
+
+nav #mobile-menu .content hr {
+  width: 100%;
+  height: 1px;
+  background: var(--pure-black);
+  opacity: 0.25;
+  margin: 20px 0;
+}
+
+nav #mobile-menu .content .inviteBtn2 {
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 2.5px;
+  color: var(--pure-white);
+  background: var(--pure-black);
+  padding: 14px 68px;
+  text-transform: uppercase;
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: var(--pure-black);
+  position: relative;
+  transition: transform 100ms;
+}
+
+.hamburger .bar:last-child {
+  transform: translateY(-4px)
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  nav {
+    padding: 0 49px;
+  }
+
+  .inviteBtn {
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 2.5px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 0 24px;
+    height: 72px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:first-child {
+    transform: rotate(-45deg);
+  }
+
+  .hamburger.active .bar:last-child {
+    transform: rotate(47deg);
+    bottom: 1px;
+  }
+
+  nav .content .navbar {
+    display: none;
+  }
+
+  nav .content .inviteBtn {
+    display: none;
+  }
+
+  nav #mobile-menu.active {
+    left: 0;
+  }
+}

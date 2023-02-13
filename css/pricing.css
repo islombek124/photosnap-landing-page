@@ -1,0 +1,308 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  height: 72px;
+}
+
+#prices {
+  width: 100%;
+  padding: 120px 0 160px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#prices .content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 160px;
+}
+
+.basic-prices {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.basic-prices .switchPrices {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin: auto;
+}
+
+.basic-prices .switchPrices .text {
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #000000;
+  opacity: 0.5;
+}
+
+.basic-prices .switchPrices .text.active {
+  text-align: right;
+  color: #000000;
+  opacity: 1;
+}
+
+.basic-prices .prices {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.basic-prices .prices .price {
+  max-width: 375px;
+  width: 100%;
+}
+
+.basic-prices .prices .simple-plan {
+  padding: 56px 40px 40px 40px;
+  background-color: #F5F5F5;
+  position: relative;
+}
+
+.basic-prices .prices .pro-plan {
+  padding: 88px 40px 71px 40px;
+  background-color: var(--pure-black);
+  position: relative;
+}
+
+.basic-prices .prices .pro-plan::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background: var(--main-accent);
+  top: 0;
+  left: 0;
+}
+
+.basic-prices .prices .simple-plan .contents,
+.basic-prices .prices .pro-plan .contents {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.basic-prices .prices .price .contents .aboutP h4 {
+  font-size: 24px;
+  line-height: 25px;
+  margin-bottom: 18px;
+}
+
+.basic-prices .prices .pro-plan .contents .aboutP h4 {
+  color: var(--pure-white);
+}
+
+.basic-prices .prices .price .contents .aboutP p {
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--pure-black);
+  opacity: 0.6;
+}
+
+.basic-prices .prices .pro-plan .contents .aboutP p {
+  color: var(--pure-white);
+}
+
+.basic-prices .prices .price .contents .priceP h3 {
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 4.16667px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.basic-prices .prices .pro-plan .contents .priceP h3 {
+  color: var(--pure-white);
+}
+
+.basic-prices .prices .price .contents .priceP span {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--pure-black);
+  opacity: 0.6;
+}
+
+.basic-prices .prices .pro-plan .contents .priceP span {
+  color: var(--pure-white);
+}
+
+.basic-prices .prices .price .contents .purchaseP button {
+  padding: 12px 40px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2px;
+}
+
+.basic-prices .prices .simple-plan .contents .purchaseP button {
+  background: var(--pure-black);
+  color: var(--pure-white);
+}
+
+.basic-prices .prices .simple-plan .contents .purchaseP button:hover {
+  background: #ddd;
+  color: var(--pure-black);
+}
+
+.basic-prices .prices .pro-plan .contents .purchaseP button {
+  background: var(--pure-white);
+  color: var(--pure-black);
+}
+
+label {
+  pointer-events: none;
+}
+
+label .input {
+  display: none;
+}
+
+label .input:checked+.toggle-wrapper>.selector {
+  left: calc(100% - 28px);
+  background-color: white;
+}
+
+label .input:checked+.toggle-wrapper {
+  background-color: black;
+}
+
+label .toggle-wrapper {
+  position: relative;
+  width: 64px;
+  height: 32px;
+  background-color: #DFDFDF;
+  border-radius: 16px;
+  margin: auto;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+label .toggle-wrapper .selector {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: black;
+  -webkit-transition: left 0.25s ease;
+  transition: left 0.25s ease;
+  border-radius: 50%;
+}
+
+.amenities {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.amenities h3 {
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 4.16667px;
+  text-transform: uppercase;
+  color: var(--pure-black);
+  margin-bottom: 56px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: sans-serif;
+  max-width: 731px;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+th,
+td {
+  padding: 23.5px 24px;
+  text-align: left;
+  border-bottom: 1px solid #000;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  color: var(--pure-black);
+}
+
+tbody th,
+td {
+  border-bottom: 1px solid #DFDFDF;
+}
+
+.compareAva {
+  text-align: center;
+}
+
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .amenities {
+    padding: 0 40px;
+  }
+
+  .prices {
+    flex-direction: column;
+  }
+
+  #prices .content .basic-prices .prices .price {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #prices {
+    padding: 64px 10px;
+  }
+
+  .basic-prices .prices {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .basic-prices .prices .price {
+    width: 100%;
+  }
+
+  .basic-prices .prices .pro-plan {
+    padding: 48px 21px;
+  }
+
+  .basic-prices .prices .simple-plan {
+    padding: 56px 36px 40px 36px;
+  }
+
+  .amenities {
+    padding: 0 0;
+    display: grid;
+    place-content: center;
+    place-items: center;
+  }
+
+  .amenities h3 {
+    display: none;
+  }
+
+  .amenities table {
+    max-width: 100%;
+  }
+
+  th,
+  td {
+    padding: 23.5px 0;
+  }
+}

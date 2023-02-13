@@ -1,0 +1,142 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+/*  */
+
+nav {
+  height: 72px;
+}
+
+/*  */
+
+.sct-1 {
+  width: 100%;
+  display: flex;
+  height: max-content;
+}
+
+.sct .sct-about {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 172px 125px;
+  background: var(--pure-black);
+}
+
+.sct .sct-about::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 144px;
+  background: var(--main-accent);
+  left: 0;
+}
+
+.sct .sct-about .content h1 {
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 4.16667px;
+  text-transform: uppercase;
+  color: var(--pure-white);
+}
+
+.sct .sct-about .content p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--pure-white);
+  opacity: 0.6;
+}
+
+.sct .sct-img {
+  width: 60%;
+  object-fit: cover;
+  object-position: left;
+}
+
+/*  */
+
+.sct.about {
+  width: 100%;
+  padding: 160px 165px;
+}
+
+.sct.about .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 104px;
+}
+
+.sct.about .content .about-item {
+  text-align: center;
+  max-width: 350px;
+}
+
+.sct.about .content .about-item .texts h4 {
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--pure-black);
+  margin: 48px 0 6px 0;
+}
+
+.sct.about .content .about-item .texts p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--pure-black);
+  opacity: 0.6;
+}
+
+/*  */
+
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .sct .sct-about {
+    width: 60%;
+  }
+
+  .sct .sct-img {
+    width: 40%;
+  }
+
+  .sct.about .content {
+    grid-template-columns: 1fr 1fr;
+    gap: 94px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sct {
+    flex-direction: column-reverse;
+  }
+
+  .sct .sct-about {
+    padding: 72px 28px;
+  }
+
+  .sct .sct-about::after {
+    width: 128px;
+    height: 6px;
+    top: 0;
+    left: 5%;
+  }
+
+  .sct .sct-about,
+  .sct .sct-img {
+    width: 100%;
+  }
+
+  .sct.about {
+    padding: 91px 33px;
+  }
+
+  .sct.about .content {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+}
